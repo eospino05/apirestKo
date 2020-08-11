@@ -1,0 +1,22 @@
+# Excluir DataSourceAutoConfiguration
+#spring:
+#  autoconfigure:
+#    exclude:
+#      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+
+
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost/kotlinrest?createDatabaseIfNotExist=true&verifyServerCertificate=false&useSSL=true
+    driverClassName: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+
+  jpa:
+    databasePlatform: org.hibernate.dialect.MySQL57Dialect
+    showSql: true
+    properties:
+      hibernate:
+        formatSql: true
+        ddlAuto: create-drop
